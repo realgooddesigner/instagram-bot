@@ -1,0 +1,62 @@
+{
+  "name": "instagrambotjs",
+  "description": "Instagram Bot made with love and Node.js",
+  "version": "0.9.2",
+  "main": "bot.js",
+  "author": "Patryk Rzucidlo [@ptkdev] <support@ptkdev.io> (https://ptkdev.it)",
+  "license": "GPL-3.0",
+  "homepage": "https://instagram.bot.ptkdev.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/social-manager-tools/instagram-bot.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/social-manager-tools/instagram-bot.js/issues"
+  },
+  "scripts": {
+    "start": "node bot.js",
+    "start-forever": "forever -o ./logs/debug.log -e ./logs/errors.log start bot.js",
+    "start-pm2": "PM2_HOME=./.pm2 pm2 -o ./logs/debug.log -e ./logs/errors.log start bot.js",
+    "start-pm2-nolog": "PM2_HOME=./.pm2 pm2 -o /dev/null -e ./logs/errors.log start bot.js ",
+    "stop": "killall node",
+    "stop-forever": "forever stop bot.js",
+    "stop-pm2": "PM2_HOME=./pm2 pm2 stop bot.js",
+    "clean": "rm -r node_modules && rm package-lock.json && npm install",
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore --fix",
+    "precommit-clean": "echo \"123456\" > ./loginpin.txt && echo \"\" > ./logs/errors.log && echo \"\" > ./logs/debug.log && rm -rf /logs/screenshot/*.png && echo \"\" > ./databases/logs.db && echo \"\" > ./databases/fdf.db",
+    "precommit-lint-check": "echo 'Pre-commit lint checks...' && exit 0",
+    "pm2": "PM2_HOME=./.pm2 pm2"
+  },
+  "pre-commit": [
+    "precommit-lint-check",
+    "lint"
+  ],
+  "keywords": [
+    "bot",
+    "ptkdev",
+    "instagram",
+    "instagram-bot",
+    "puppeteer",
+    "selenium",
+    "webdriverio"
+  ],
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "forever": "^0.15.3",
+    "instagrambotlib": "^0.9.10",
+    "pm2": "^3.2.2",
+    "yargs": "^12.0.1"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-snakecasejs": "^1.2.1",
+    "eslint-plugin-standard": "^3.1.0",
+    "pre-commit": "^1.2.2"
+  }
+}
