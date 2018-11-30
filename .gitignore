@@ -123,3 +123,7 @@ package-lock.json
 ################
 configs/*
 !configs/config.js.tpl
+
+# Dotenv Files #
+################
+.env

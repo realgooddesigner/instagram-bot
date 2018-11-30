@@ -26,6 +26,7 @@
  *              GitHub Repo:  https://github.com/social-manager-tools/instagram-bot.js
  */
 const argv = require("yargs").argv;
+const dotenv = require("dotenv").load();
 const fs = require("fs");
 const Bot = require("instagrambotlib");
 
