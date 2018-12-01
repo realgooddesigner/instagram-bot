@@ -119,9 +119,9 @@ package-lock.json
 ##########
 .pm2
 
-# Social Manager Tools #
-################
-configs/*
+# Social Manager Tools (included since dotenv hides sensitive config info) #
+########################
+#configs/*
 !configs/config.js.tpl
 
 # Deploy Files #
