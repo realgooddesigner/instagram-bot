@@ -7,7 +7,7 @@ module.exports = {
     // Instagram Account
     "instagram_username": process.env.IG_LOGIN , // without @
     "instagram_password": process.env.IG_PW ,
-    "instagram_hashtag": ["gotitforcheap", "ChicagoArtBookFair", "johnmaus", "posterdesign", "highsnobiety", "netart", "vaporwave", "babycore", "onbooooooom", "lebenliebegrafik", "arielpink", "riso", "risograph", "velvetropes", "postinternet", "itsnicethat", "herblubalin", "surrealism", "mirrorart", "2ddesign", "artdirection", "paulrand", "wimcrouwel", "yalegraphicdesign", "memphisgroup"], //without #, raccomanded more than 20
+    "instagram_hashtag": [ "momaps1", "hernanbas", "asgerjorn", "riso", "velvetropes", "chicagozinefest", "ginabeavers", "highsnobiety", "itsnicethat", "posterworkshop", "berlinbookshop", "deepcolorpodcast", "uniteditions", "studiovisit", "ecfartcenters", "joshsmith", "yalegraphicdesign", "risograph", "gotitforcheap", "ChicagoArtBookFair", "onbooooooom", "lebenliebegrafik", "arielpink", "cindysherman", "memphisgroup"], //without #, raccomanded more than 20
     "instagram_pin": "sms", //method to receive pin (email or sms)
 
     // BOT Configs
